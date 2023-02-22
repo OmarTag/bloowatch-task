@@ -49,7 +49,7 @@
   gap: 1rem;
   & .product_name {
     font-size: 2.2rem;
-    font-weight: 600;
+    font-weight: 700;
   }
   & .product_on_sale {
     display: flex;
@@ -85,7 +85,7 @@
     cursor: pointer;
     background-color: transparent;
     padding: 1.2rem 4rem;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.4rem;
     letter-spacing: 1px;
     transition: all 0.4s;
@@ -112,7 +112,7 @@
 
 .tabs {
   margin-bottom: 10rem;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.4rem;
 
   & .tabs_list {

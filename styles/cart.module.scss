@@ -5,7 +5,7 @@
   padding: 2rem;
 
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
 
   & .details_top {
     display: grid;
@@ -35,7 +35,7 @@
       display: flex;
       align-items: center;
       justify-content: start;
-      font-weight: 600;
+      font-weight: 700;
       gap: 1rem;
       grid-column: 2 / 6;
     }
@@ -80,7 +80,7 @@
       border-bottom: 1px solid #d8d8d8;
       margin: 1.8rem 0;
       & span {
-        font-weight: 600;
+        font-weight: 700;
       }
     }
   }
