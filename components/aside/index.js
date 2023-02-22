@@ -24,6 +24,11 @@ const Aside = () => {
   const handlePriceFilter = (values) => {
     setPriceRanges(values);
   };
+  const handleCategoryFilter = (category) => {
+    router.replace({
+      query: { category },
+    });
+  };
   const priceQueries = (values) => {
     router.replace({
       query: { priceFrom: values[0], priceTo: values[1] },
@@ -83,7 +88,13 @@ const Aside = () => {
         <p>CATEGORIES</p>
         <ul>
           {Object.values(categories).map((category) => (
-            <li key={category}>{category}</li>
+            <li
+              onClick={() => handleCategoryFilter(category)}
+              style={{ cursor: "pointer" }}
+              key={category}
+            >
+              {category}
+            </li>
           ))}
         </ul>
       </div>

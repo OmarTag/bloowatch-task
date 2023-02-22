@@ -1,14 +1,15 @@
 import LayoutTitle from "@/components/layout/LayoutTitle";
 import LayoutHead from "@/components/layout/LayoutHead";
 import { Aside, Product } from "@/components";
-import products from "@/utils/products";
+import data from "@/utils/products";
 import { useRouter } from "next/router";
 import styles from "../styles/ProductList.module.scss";
-
+import { useState } from "react";
 import isEmpty from "lodash.isempty";
 
 export default function ProductList() {
   const router = useRouter();
+  const [products, setProducts] = useState(data);
   const { query } = router;
   // found a product from search
   const singleProduct =
@@ -39,6 +40,14 @@ export default function ProductList() {
     if (query.priceFilter === "default") {
     }
   }
+  // found single or multiple products from price filtering
+  // Not wotking
+  // if (query.category) {
+  //   console.log(query.category);
+  //   setProducts(
+  //     products.filter((obj) => obj.categories.includes(query.category))
+  //   );
+  // }
   const onSortHandler = (e) => {
     if (e.target.value) {
       router.replace({ query: { priceFilter: e.target.value } });
@@ -53,7 +62,15 @@ export default function ProductList() {
         itle={singleProduct ? singleProduct.name : `Shop`}
         description="Bloowatch Shop"
       />
-      <LayoutTitle title={singleProduct ? singleProduct.name : `Shop`} />
+      <LayoutTitle
+        title={
+          query.category
+            ? query.category
+            : singleProduct
+            ? singleProduct.name
+            : `Shop`
+        }
+      />
       <section className={styles.container}>
         <div className={styles.select_container}>
           <select onChange={onSortHandler} className={styles.sort}>
