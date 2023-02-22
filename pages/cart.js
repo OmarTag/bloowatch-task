@@ -7,6 +7,13 @@ import LayoutTitle from "@/components/layout/LayoutTitle";
 import styles from "../styles/cart.module.scss";
 import { Quantity } from "@/components";
 import { IoCloseOutline } from "react-icons/io5";
+import { Open_Sans } from "@next/font/google";
+
+const open_sans = Open_Sans({
+  weight: ["400", "600", "800"],
+  style: ["normal"],
+  subsets: ["latin"],
+});
 const Cart = () => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
@@ -24,7 +31,7 @@ const Cart = () => {
     <>
       <LayoutHead title="Cart" description="Bloowatch Shopping Cart" />
       <LayoutTitle title="Cart" />
-      <div className="container">
+      <div className={`container ${open_sans.className}`}>
         {/* {cart.items.length > 0 ? ( */}
         <>
           <section className={styles.details}>

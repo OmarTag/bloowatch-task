@@ -9,6 +9,13 @@ import LayoutTitle from "@/components/layout/LayoutTitle";
 import { Quantity, Product } from "@/components";
 import data from "@/utils/products";
 import Image from "next/image";
+import { Open_Sans } from "@next/font/google";
+
+const open_sans = Open_Sans({
+  weight: ["400", "600", "800"],
+  style: ["normal"],
+  subsets: ["latin"],
+});
 const ProductDetails = ({ product, products }) => {
   const {
     name,
@@ -41,7 +48,7 @@ const ProductDetails = ({ product, products }) => {
     <>
       <LayoutHead title={name} />
       <LayoutTitle title={name} />
-      <div className={`container`}>
+      <div className={`container  ${open_sans.className}`}>
         <section className={styles.container}>
           <div className={styles.product_images}>
             <div className={styles.product_variants}>

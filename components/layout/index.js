@@ -11,9 +11,9 @@ const open_sans = Open_Sans({
 export default function Layout({ children }) {
   return (
     <StoreProvider>
-      <Header />
+      <Header className={open_sans.className} />
       <main className={open_sans.className}>{children}</main>
-      <Footer />
+      <Footer className={open_sans.className} />
     </StoreProvider>
   );
 }

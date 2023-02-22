@@ -14,7 +14,7 @@
     grid-template-columns: repeat(12, 1fr);
     border-bottom: 1px solid #d8d8d8;
     & :first-child {
-      grid-column: 2 / 7;
+      grid-column: 2 / 6;
     }
     & :last-child {
       grid-column: 11 / span 3;
@@ -23,6 +23,7 @@
   & .details_bottom {
     display: grid;
     padding: 2rem;
+    gap: 2rem;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
     border-bottom: 1px solid #d8d8d8;
@@ -36,7 +37,7 @@
       justify-content: start;
 
       gap: 1rem;
-      grid-column: 2 / 7;
+      grid-column: 2 / 6;
     }
     & :last-child {
       // background-color: lime;
@@ -103,5 +104,8 @@
 @media (max-width: 800px) {
   .details {
     font-size: 1.3rem;
+  }
+  .total {
+    width: 80%;
   }
 }
