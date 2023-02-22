@@ -6,13 +6,7 @@ import { useRouter } from "next/router";
 import styles from "../styles/ProductList.module.scss";
 import { useState } from "react";
 import isEmpty from "lodash.isempty";
-import { Open_Sans } from "@next/font/google";
 
-const open_sans = Open_Sans({
-  weight: ["400", "600", "800"],
-  style: ["normal"],
-  subsets: ["latin"],
-});
 export default function ProductList() {
   const router = useRouter();
   const [products, setProducts] = useState(data);
@@ -70,7 +64,7 @@ export default function ProductList() {
             : `Shop`
         }
       />
-      <section className={`${styles.container} ${open_sans.className}`}>
+      <section className={`${styles.container}`}>
         <div className={styles.select_container}>
           <select onChange={onSortHandler} className={styles.sort}>
             <option value="">Sort by:</option>

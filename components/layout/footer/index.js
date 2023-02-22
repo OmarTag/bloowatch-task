@@ -1,15 +1,9 @@
 import styles from "./Footer.module.scss";
 import Image from "next/image";
-import { Open_Sans } from "@next/font/google";
 
-const open_sans = Open_Sans({
-  weight: ["400", "600", "800"],
-  style: ["normal"],
-  subsets: ["latin"],
-});
 const Footer = () => {
   return (
-    <footer className={`${styles.container} ${open_sans.className}`}>
+    <footer className={`${styles.container} `}>
       <div>
         <p>ABOUT</p>
         <p style={{ fontWeight: 400 }}>

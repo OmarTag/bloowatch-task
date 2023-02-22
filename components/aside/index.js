@@ -5,13 +5,7 @@ import data, { categories } from "@/utils/products";
 import { RelatedProduct } from "../";
 import { useRouter } from "next/router";
 import debounce from "lodash.debounce";
-import { Open_Sans } from "@next/font/google";
 
-const open_sans = Open_Sans({
-  weight: ["400", "600", "800"],
-  style: ["normal"],
-  subsets: ["latin"],
-});
 const Aside = () => {
   const router = useRouter();
   const [priceRanges, setPriceRanges] = useState([80, 180]);
@@ -52,7 +46,7 @@ const Aside = () => {
   const debouncedSearch = debounce(handleSearch, 400);
 
   return (
-    <div className={`${styles.container} ${open_sans.className}`}>
+    <div className={`${styles.container}`}>
       <div className={styles.select_container}>
         <select onChange={onSortHandler} className={styles.sort}>
           <option value="">Sort by:</option>

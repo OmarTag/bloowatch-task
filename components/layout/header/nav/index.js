@@ -3,18 +3,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { IoCartOutline } from "react-icons/io5";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
-import { Open_Sans } from "@next/font/google";
 
-const open_sans = Open_Sans({
-  weight: ["400", "600", "800"],
-  style: ["normal"],
-  subsets: ["latin"],
-});
 const Nav = () => {
   const [hambMenuOpen, setHamMenuOpen] = useState(false);
 
   return (
-    <nav className={`${styles.container} ${open_sans.className}`}>
+    <nav className={`${styles.container}`}>
       <ul className={styles.links}>
         <li>
           {" "}

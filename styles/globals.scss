@@ -9,7 +9,10 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
 }
-
+html,
+body {
+  font-family: "Open sans";
+}
 // container
 .container {
   max-width: 130rem;
