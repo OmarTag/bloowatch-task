@@ -10,7 +10,7 @@ import { IoCloseOutline } from "react-icons/io5";
 const Cart = () => {
   const { state, dispatch } = useContext(Store);
   const { cart } = state;
-  console.log(cart);
+
   const removeItemHandler = (item) => {
     dispatch({ type: "CART_REMOVE_ITEM", payload: item });
   };

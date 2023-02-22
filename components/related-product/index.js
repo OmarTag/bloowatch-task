@@ -13,9 +13,9 @@ const RelatedProduct = ({ product }) => {
         <div style={{ marginTop: "1rem" }}>
           {new Array(5).fill(0).map((c, i) => {
             if (i < rating) {
-              return <img src={"/images/star-filled.svg"} />;
+              return <img key={i} src={"/images/star-filled.svg"} />;
             }
-            return <img src={"/images/star.svg"} />;
+            return <img key={i} src={"/images/star.svg"} />;
           })}
         </div>
       </div>

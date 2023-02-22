@@ -40,14 +40,7 @@ export default function ProductList() {
     if (query.priceFilter === "default") {
     }
   }
-  // found single or multiple products from price filtering
-  // Not wotking
-  // if (query.category) {
-  //   console.log(query.category);
-  //   setProducts(
-  //     products.filter((obj) => obj.categories.includes(query.category))
-  //   );
-  // }
+
   const onSortHandler = (e) => {
     if (e.target.value) {
       router.replace({ query: { priceFilter: e.target.value } });

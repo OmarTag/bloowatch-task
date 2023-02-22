@@ -151,7 +151,7 @@ const ProductDetails = ({ product, products }) => {
         <section className={styles.otherProducts}>
           <div className={styles.products}>
             {products.slice(3, 6).map((product) => (
-              <Product product={product} />
+              <Product key={product.name} product={product} />
             ))}
           </div>
         </section>
@@ -172,7 +172,6 @@ export const getStaticPaths = () => {
   };
 };
 export const getStaticProps = (context) => {
-  console.log("CONTEXT", context.params);
   return {
     props: {
       products: data,
