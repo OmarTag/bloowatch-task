@@ -1,0 +1,14 @@
+@import "../../styles/colors";
+
+.title {
+  background: $bloo;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  font-weight: 400;
+  color: white;
+  height: 21.2rem;
+  padding-left: 25rem;
+  font-size: 5rem;
+}

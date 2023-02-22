@@ -1,0 +1,107 @@
+@import "colors";
+
+.details {
+  display: grid;
+  padding: 2rem;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  & .details_top {
+    display: grid;
+    padding: 2rem;
+
+    grid-template-columns: repeat(12, 1fr);
+    border-bottom: 1px solid #d8d8d8;
+    & :first-child {
+      grid-column: 2 / 7;
+    }
+    & :last-child {
+      grid-column: 11 / span 3;
+    }
+  }
+  & .details_bottom {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    border-bottom: 1px solid #d8d8d8;
+    & :first-child {
+      // background-color: lime;
+      grid-column: 1 / 2;
+    }
+    & :nth-child(2) {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+
+      gap: 1rem;
+      grid-column: 2 / 7;
+    }
+    & :last-child {
+      // background-color: lime;
+      grid-column: 11 / span 3;
+    }
+  }
+  & .actions {
+    display: grid;
+    margin-bottom: 8rem;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 3rem 0;
+    & .actions_btns {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      grid-column: 2 / span 4;
+      & button {
+        width: 100%;
+        padding: 2rem 0;
+      }
+    }
+  }
+}
+.total {
+  width: 50%;
+  margin-bottom: 10rem;
+  & h2 {
+    font-size: 3rem;
+    letter-spacing: 1.25rem;
+  }
+  & ul {
+    list-style: none;
+
+    & li {
+      display: flex;
+      justify-content: space-between;
+      gap: 10rem;
+      font-size: 1.5rem;
+      padding: 2rem;
+      border-bottom: 1px solid #d8d8d8;
+      margin: 1.8rem 0;
+      & span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .details {
+    font-size: 1.5rem;
+    & .actions {
+      grid-template-columns: repeat(6, 1fr);
+      padding: 3rem 0;
+      & .actions_btns {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        grid-column: 1 / span 6;
+        transition: grid-column 0.5s;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  .details {
+    font-size: 1.3rem;
+  }
+}

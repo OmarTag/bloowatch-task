@@ -1,0 +1,53 @@
+.container {
+  padding: 8rem 12rem 25rem 12rem;
+
+  background: black;
+  width: 100%;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 5rem;
+  color: white;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 1.4rem;
+
+    & ul {
+      list-style: none;
+      & li {
+        font-weight: 400;
+      }
+    }
+  }
+
+  & p {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  & .instagram {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+@media (max-width: 1100px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 8rem 5rem 20rem 5rem;
+    row-gap: 5rem;
+    column-gap: 5rem;
+    & div {
+      font-size: 2.5rem;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    & div {
+      font-size: 2.3rem;
+    }
+  }
+}

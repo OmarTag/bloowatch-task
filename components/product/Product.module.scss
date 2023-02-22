@@ -1,0 +1,101 @@
+@import "../../styles/colors";
+.container {
+  max-width: 100%;
+  align-self: end;
+  height: 100%;
+  cursor: pointer;
+}
+.product_box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80%;
+  // background-color: red;
+  justify-content: center;
+  & .product_bg {
+    background-color: $bg;
+    height: 75%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+  & .sale {
+    &:after {
+      left: 5%;
+
+      z-index: 1000;
+
+      content: "Sale";
+      height: 6.5rem;
+      width: 6.5rem;
+      text-align: center;
+      border-radius: 5rem;
+      background-color: $bloo;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      font-size: 2rem;
+      font-weight: 400;
+      color: white;
+
+      top: -40px;
+    }
+  }
+  & .product_img {
+    max-width: 50%;
+  }
+  & button {
+    width: 100%;
+    padding: 2rem;
+    position: absolute;
+    bottom: 0;
+    transition: display 1s;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+.product_info {
+  max-width: 100%;
+  height: 20%;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  & .product_name {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  & .product_categories {
+    color: $bloo;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  & .product_on_sale {
+    display: flex;
+    align-items: center;
+    width: 32%;
+    gap: 1rem;
+
+    justify-content: center;
+
+    & .product_discounted_price {
+      text-decoration: line-through;
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+  }
+}
+.product_price {
+  background-color: $bloo;
+  padding: 0.5rem 3rem;
+
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+}
